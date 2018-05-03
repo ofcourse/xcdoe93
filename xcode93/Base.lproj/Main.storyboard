@@ -18,13 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcf-TT-hJ6">
-                                <rect key="frame" x="104" y="118" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcf-TT-hJ6">
+                                <rect key="frame" x="78" y="118" width="98" height="30"/>
+                                <state key="normal" title="rxswift clicked"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gl-2Q-Uon">
+                                <rect key="frame" x="67" y="187" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Ztf-ot-j0J"/>
+                                </constraints>
+                                <state key="normal" title="alamofire request"/>
+                                <connections>
+                                    <action selector="networkingRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4u-xY-xkb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Gl-2Q-Uon" firstAttribute="top" secondItem="Qcf-TT-hJ6" secondAttribute="bottom" constant="39" id="0Ig-Kr-Y2W"/>
+                            <constraint firstItem="Qcf-TT-hJ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="EyY-Xd-DW7"/>
+                            <constraint firstItem="Qcf-TT-hJ6" firstAttribute="centerX" secondItem="1Gl-2Q-Uon" secondAttribute="centerX" id="Jlf-oB-1td"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="1Gl-2Q-Uon" secondAttribute="trailing" constant="-187" id="xxW-XK-vIU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

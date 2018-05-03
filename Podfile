@@ -8,6 +8,11 @@ target 'xcode93' do
   pod 'RxCocoa', '~> 4.1.2'
   pod 'NSObject+Rx', '~> 4.3.0'
   pod 'RxOptional', '~> 3.3.0'
+  pod 'RxDataSources', '~> 3.0.2' #This is a collection of reactive data sources for UITableView and UICollectionView
+  
+  pod 'Alamofire', '~> 4.7.0'
+  pod 'Moya', '~> 11.0.1'
+  pod 'Moya/RxSwift', '~> 11.0'
   # Pods for xcode93
 
 end

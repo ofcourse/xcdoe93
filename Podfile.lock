@@ -1,7 +1,22 @@
 PODS:
+  - Alamofire (4.7.0)
+  - Differentiator (3.0.2)
+  - Moya (11.0.1):
+    - Moya/Core (= 11.0.1)
+  - Moya/Core (11.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (11.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
   - "NSObject+Rx (4.3.0)":
     - RxSwift (~> 4.0)
+  - Result (3.2.4)
   - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxOptional (3.3.0):
     - RxCocoa (~> 4.0)
@@ -9,24 +24,38 @@ PODS:
   - RxSwift (4.1.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7.0)
+  - Moya (~> 11.0.1)
+  - Moya/RxSwift (~> 11.0)
   - "NSObject+Rx (~> 4.3.0)"
   - RxCocoa (~> 4.1.2)
+  - RxDataSources (~> 3.0.2)
   - RxOptional (~> 3.3.0)
   - RxSwift (~> 4.1.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Differentiator
+    - Moya
     - "NSObject+Rx"
+    - Result
     - RxCocoa
+    - RxDataSources
     - RxOptional
     - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  Moya: 3d594ada51a21cc02b18739ab578a1984f900c8a
   "NSObject+Rx": 9a5eeff5e08156f849fa973514456f28eef08742
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxOptional: e5448d3e21024489e07c31f6a262f2b50c975367
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: a5d34dde8a7788c1bb7f9df1c083408d74e905d1
+PODFILE CHECKSUM: 9ec4542f21c675cb82062bfd52c014d60589a861
 
 COCOAPODS: 1.5.0

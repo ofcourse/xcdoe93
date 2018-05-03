@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 import RxOptional
+import Alamofire
 
 class ViewController: UIViewController {
     @IBOutlet weak var goButton: UIButton!
@@ -49,6 +50,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func networkingRequest(_ sender: Any) {
+        Alamofire.request("http://wwww.baidu.com").response { response in
+            print("Request: \(String(describing: response.request))")
+            print("Response: \(response.response)")
+            print("Error: \(response.error)")
+            if let data = response.data , let utf8Text = String(data:data, encoding:.utf8) {
+                print("data:\(utf8Text)")
+            }
+        }
+       let sessionManager = Alamofire.SessionManager.default
+    }
 }
 
