@@ -32,6 +32,11 @@
                                     <action selector="networkingRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4u-xY-xkb"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehI-3q-f9i">
+                                <rect key="frame" x="78" y="295" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -44,6 +49,7 @@
                     </view>
                     <connections>
                         <outlet property="goButton" destination="Qcf-TT-hJ6" id="2eO-u3-xMg"/>
+                        <outlet property="greenView" destination="ehI-3q-f9i" id="8DX-Kz-SWT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

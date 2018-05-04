@@ -12,9 +12,11 @@ import RxCocoa
 import NSObject_Rx
 import RxOptional
 import Alamofire
+import RxGesture
 
 class ViewController: UIViewController {
     @IBOutlet weak var goButton: UIButton!
+    @IBOutlet weak var greenView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,11 @@ class ViewController: UIViewController {
          next(three)
          completed
          */
+        greenView.rx.tapGesture()
+        .when(.recognized)
+        .subscribe(onNext:{ (_) in
+            print("greenView clicked")
+        }).disposed(by: rx.disposeBag)
         
     }
     override func didReceiveMemoryWarning() {
