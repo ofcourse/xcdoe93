@@ -46,12 +46,75 @@ class ViewController: UIViewController {
          completed
          */
         greenView.rx.tapGesture()
+        .observeOn(MainScheduler.asyncInstance)
         .when(.recognized)
+         .observeOn(MainScheduler.instance)
         .subscribe(onNext:{ (_) in
             print("greenView clicked")
         }).disposed(by: rx.disposeBag)
+        observeOnAndsubscribeON()
+    }
+    
+    func  observeOnAndsubscribeON () {
+        //observeOn vs. subscribeOn http://rx-marin.com/post/observeon-vs-subscribeon/
+        
+        Observable<Int>.create { observer  in
+            assert(Thread.isMainThread==true)
+            observer.onNext(1)
+            sleep(1)
+            observer.onNext(2)
+            return Disposables.create()
+            }.subscribe(onNext:{ el in
+                print(Thread.isMainThread)
+                assert(Thread.isMainThread==true)
+            }).disposed(by: rx.disposeBag)
+        
+        DispatchQueue.global(qos: .background).async {
+            Observable<Int>.create { observer  in
+                assert(Thread.isMainThread==false)
+                observer.onNext(1)
+                sleep(1)
+                observer.onNext(2)
+                return Disposables.create()
+                }.subscribe(onNext:{ el in
+                    assert(Thread.isMainThread==false)
+                    print(Thread.isMainThread)
+                }).disposed(by: self.rx.disposeBag)
+        }
+
+        Observable<Int>.create { observer in
+            assert(Thread.isMainThread==false)
+            observer.onNext(1)
+            sleep(1)
+            observer.onNext(2)
+            return Disposables.create()
+            }
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .subscribe(onNext: { el in
+                print(Thread.isMainThread)
+                assert(Thread.isMainThread==false)
+            }).disposed(by: rx.disposeBag)
+        
+        
+        Observable<Int>.create { observer in
+            assert(Thread.isMainThread==false)
+            observer.onNext(1)
+            sleep(1)
+            observer.onNext(2)
+            return Disposables.create()
+            }
+            .observeOn(MainScheduler.instance)//决定下面操作，包括subscribe block中的线程
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))//决定create block中的执行线程
+            .subscribe(onNext: { el in
+                assert(Thread.isMainThread==true)
+                print(Thread.isMainThread)
+            }).disposed(by: rx.disposeBag)
+        
         
     }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

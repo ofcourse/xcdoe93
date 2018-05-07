@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      //https://github.com/github/gitignore/blob/master/Swift.gitignore
      // https://github.com/RxSwiftCommunity
     // RxSwift+Moya+ObjectMapper优雅的网络请求 http://www.cocoachina.com/swift/20170911/20522.html
+    // observeOn vs. subscribeOn http://rx-marin.com/post/observeon-vs-subscribeon/
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
