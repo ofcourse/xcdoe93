@@ -16,9 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      // https://github.com/RxSwiftCommunity
     // RxSwift+Moya+ObjectMapper优雅的网络请求 http://www.cocoachina.com/swift/20170911/20522.html
     // observeOn vs. subscribeOn http://rx-marin.com/post/observeon-vs-subscribeon/
+    // Use a weak reference whenever it is valid for that reference to become nil at some point during its lifetime. Conversely, use an unowned reference when you know that the reference will never be nil once it has been set during initialization.
+    //Define a capture in a closure as an unowned reference when the closure and the instance it captures will always refer to each other, and will always be deallocated at the same time.”
+    // https://krakendev.io/blog/weak-and-unowned-references-in-swift
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       
         return true
     }
 
@@ -47,3 +52,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UIWindow {
+    /// Returns the currently visible view controller if any reachable within the window.
+    public var visibleViewController: UIViewController? {
+        return UIWindow.visibleViewController(from: rootViewController)
+    }
+    
+    /// Recursively follows navigation controllers, tab bar controllers and modal presented view controllers starting
+    /// from the given view controller to find the currently visible view controller.
+    ///
+    /// - Parameters:
+    ///   - viewController: The view controller to start the recursive search from.
+    /// - Returns: The view controller that is most probably visible on screen right now.
+    public static func visibleViewController(from viewController: UIViewController?) -> UIViewController? {
+        switch viewController {
+        case let navigationController as UINavigationController:
+            return UIWindow.visibleViewController(from: navigationController.visibleViewController ?? navigationController.topViewController)
+            
+        case let tabBarController as UITabBarController:
+            return UIWindow.visibleViewController(from: tabBarController.selectedViewController)
+            
+        case let presentingViewController where viewController?.presentedViewController != nil:
+            return UIWindow.visibleViewController(from: presentingViewController?.presentedViewController)
+            
+        default:
+            return viewController
+        }
+    }
+}

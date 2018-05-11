@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         goButton.rx.tap.subscribe(onNext: { (tap) in
             print("hello swift")
         }).disposed(by: rx.disposeBag)
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
             print("greenView clicked")
         }).disposed(by: rx.disposeBag)
         observeOnAndsubscribeON()
+        
     }
     
     func  observeOnAndsubscribeON () {
@@ -113,6 +116,13 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let visibleViewCtrl = UIApplication.shared.keyWindow?.visibleViewController {
+            // do whatever you want with your `visibleViewCtrl`
+            print(visibleViewCtrl );
+        }
+    }
     
     
     override func didReceiveMemoryWarning() {
