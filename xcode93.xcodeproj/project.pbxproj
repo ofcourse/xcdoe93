@@ -13,6 +13,8 @@
 		FA12B4EF20942478003997A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA12B4ED20942478003997A2 /* Main.storyboard */; };
 		FA12B4F12094247C003997A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA12B4F02094247C003997A2 /* Assets.xcassets */; };
 		FA12B4F42094247C003997A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA12B4F22094247C003997A2 /* LaunchScreen.storyboard */; };
+		FA6AFC9F20A58EDD00055A6F /* TapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AFC9E20A58EDD00055A6F /* TapViewController.swift */; };
+		FA6AFCA120A989AF00055A6F /* LastLongGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AFCA020A989AF00055A6F /* LastLongGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FA12B4F02094247C003997A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA12B4F32094247C003997A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA12B4F52094247C003997A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6AFC9E20A58EDD00055A6F /* TapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapViewController.swift; sourceTree = "<group>"; };
+		FA6AFCA020A989AF00055A6F /* LastLongGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastLongGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				FA12B4F02094247C003997A2 /* Assets.xcassets */,
 				FA12B4F22094247C003997A2 /* LaunchScreen.storyboard */,
 				FA12B4F52094247C003997A2 /* Info.plist */,
+				FA6AFC9E20A58EDD00055A6F /* TapViewController.swift */,
+				FA6AFCA020A989AF00055A6F /* LastLongGestureRecognizer.swift */,
 			);
 			path = xcode93;
 			sourceTree = "<group>";
@@ -221,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA12B4EC20942478003997A2 /* ViewController.swift in Sources */,
+				FA6AFCA120A989AF00055A6F /* LastLongGestureRecognizer.swift in Sources */,
 				FA12B4EA20942478003997A2 /* AppDelegate.swift in Sources */,
+				FA6AFC9F20A58EDD00055A6F /* TapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +378,10 @@
 				DEVELOPMENT_TEAM = FR3SC3EULN;
 				INFOPLIST_FILE = xcode93/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uuabc.xcode93;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "25d76f6a-af85-43f6-870f-91aecbfe0e50";
@@ -390,7 +401,10 @@
 				DEVELOPMENT_TEAM = FR3SC3EULN;
 				INFOPLIST_FILE = xcode93/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uuabc.xcode93;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "75586ab4-c8e2-446d-9a77-704ac16a8f7f";
