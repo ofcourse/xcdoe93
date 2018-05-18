@@ -22,7 +22,8 @@ class TapViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var greenView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //自定义z型手势 https://medium.com/ios-os-x-development/make-a-custom-uigesturerecognizer-in-objective-c-b9099fd8cfa3
+        //自定义z型手势 demo  https://github.com/jen2/CustomGestureRecognizer
         let longpress = LastLongGestureRecognizer.init(target: self, action: #selector(longClick))
         //= UILongPressGestureRecognizer(target: self, action: #selector(longClick))
        let  tap = UITapGestureRecognizer(target: self, action: #selector(tapClick))
