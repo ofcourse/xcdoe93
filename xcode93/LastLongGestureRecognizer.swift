@@ -66,7 +66,7 @@ class LastLongGestureRecognizer: UIGestureRecognizer {
     
     @objc func updateGestureState() {
         print("updateGestureState \(state)")
-        if state == .changed  {
+        if state == .changed || state == .began {
             state = .ended
             endTime = Date()
             print("\(String(describing: startTime)) --\(String(describing: endTime)) LastLongGestureRecognizer ok")
