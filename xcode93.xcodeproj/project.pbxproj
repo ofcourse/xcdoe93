@@ -13,9 +13,14 @@
 		FA12B4EF20942478003997A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA12B4ED20942478003997A2 /* Main.storyboard */; };
 		FA12B4F12094247C003997A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA12B4F02094247C003997A2 /* Assets.xcassets */; };
 		FA12B4F42094247C003997A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA12B4F22094247C003997A2 /* LaunchScreen.storyboard */; };
+		FA3F121920B669AB001A6859 /* AddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F121820B669AB001A6859 /* AddedViewController.swift */; };
+		FA3F121C20B6945C001A6859 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F121B20B6945C001A6859 /* MasterViewController.swift */; };
+		FA3F121E20B69500001A6859 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F121D20B69500001A6859 /* SummaryViewController.swift */; };
+		FA3F122020B69512001A6859 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F121F20B69512001A6859 /* SessionsViewController.swift */; };
 		FA6AFC9F20A58EDD00055A6F /* TapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AFC9E20A58EDD00055A6F /* TapViewController.swift */; };
 		FA6AFCA120A989AF00055A6F /* LastLongGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AFCA020A989AF00055A6F /* LastLongGestureRecognizer.swift */; };
 		FA6AFCA720AEACFE00055A6F /* zLetterGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6AFCA620AEACFD00055A6F /* zLetterGestureRecognizer.m */; };
+		FA6AFCA920B3DECD00055A6F /* WhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6AFCA820B3DECC00055A6F /* WhiteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +34,16 @@
 		FA12B4F02094247C003997A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA12B4F32094247C003997A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA12B4F52094247C003997A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3F121820B669AB001A6859 /* AddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedViewController.swift; sourceTree = "<group>"; };
+		FA3F121B20B6945C001A6859 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		FA3F121D20B69500001A6859 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		FA3F121F20B69512001A6859 /* SessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
 		FA6AFC9E20A58EDD00055A6F /* TapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapViewController.swift; sourceTree = "<group>"; };
 		FA6AFCA020A989AF00055A6F /* LastLongGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastLongGestureRecognizer.swift; sourceTree = "<group>"; };
 		FA6AFCA420AEACFB00055A6F /* xcode93-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xcode93-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA6AFCA520AEACFD00055A6F /* zLetterGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zLetterGestureRecognizer.h; sourceTree = "<group>"; };
 		FA6AFCA620AEACFD00055A6F /* zLetterGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zLetterGestureRecognizer.m; sourceTree = "<group>"; };
+		FA6AFCA820B3DECC00055A6F /* WhiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 		FA12B4E820942478003997A2 /* xcode93 */ = {
 			isa = PBXGroup;
 			children = (
+				FA3F121A20B6938B001A6859 /* ContainerViewController */,
 				FA6AFCA520AEACFD00055A6F /* zLetterGestureRecognizer.h */,
 				FA6AFCA620AEACFD00055A6F /* zLetterGestureRecognizer.m */,
 				FA12B4E920942478003997A2 /* AppDelegate.swift */,
@@ -97,8 +108,20 @@
 				FA6AFC9E20A58EDD00055A6F /* TapViewController.swift */,
 				FA6AFCA020A989AF00055A6F /* LastLongGestureRecognizer.swift */,
 				FA6AFCA420AEACFB00055A6F /* xcode93-Bridging-Header.h */,
+				FA6AFCA820B3DECC00055A6F /* WhiteView.swift */,
+				FA3F121820B669AB001A6859 /* AddedViewController.swift */,
 			);
 			path = xcode93;
+			sourceTree = "<group>";
+		};
+		FA3F121A20B6938B001A6859 /* ContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F121B20B6945C001A6859 /* MasterViewController.swift */,
+				FA3F121D20B69500001A6859 /* SummaryViewController.swift */,
+				FA3F121F20B69512001A6859 /* SessionsViewController.swift */,
+			);
+			path = ContainerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3F121C20B6945C001A6859 /* MasterViewController.swift in Sources */,
+				FA6AFCA920B3DECD00055A6F /* WhiteView.swift in Sources */,
 				FA6AFCA720AEACFE00055A6F /* zLetterGestureRecognizer.m in Sources */,
 				FA12B4EC20942478003997A2 /* ViewController.swift in Sources */,
 				FA6AFCA120A989AF00055A6F /* LastLongGestureRecognizer.swift in Sources */,
+				FA3F122020B69512001A6859 /* SessionsViewController.swift in Sources */,
+				FA3F121920B669AB001A6859 /* AddedViewController.swift in Sources */,
 				FA12B4EA20942478003997A2 /* AppDelegate.swift in Sources */,
 				FA6AFC9F20A58EDD00055A6F /* TapViewController.swift in Sources */,
+				FA3F121E20B69500001A6859 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

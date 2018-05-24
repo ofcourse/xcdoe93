@@ -21,6 +21,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddedViewControllerSID")
+        vc.view.frame = CGRect.init(x: 20, y: 20, width: 100, height: 100)
+        self.view.addSubview(vc.view)
+        //vc.viewWillAppear(true)
         
         goButton.rx.tap.subscribe(onNext: { (tap) in
             print("hello swift")
@@ -118,6 +122,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        print("ViewController viewWillAppear")
         if let visibleViewCtrl = UIApplication.shared.keyWindow?.visibleViewController {
             // do whatever you want with your `visibleViewCtrl`
             print(visibleViewCtrl );

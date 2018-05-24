@@ -43,6 +43,22 @@
                                     <segue destination="IRI-bC-9vm" kind="show" id="ybp-0Y-o6e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2h-4V-79L">
+                                <rect key="frame" x="194" y="182" width="151" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="go childviewcontroller"/>
+                                <connections>
+                                    <segue destination="OvH-Do-IWP" kind="show" id="00k-BM-Veq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeA-Bq-gtA">
+                                <rect key="frame" x="67" y="512" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="container viewcontroller"/>
+                                <connections>
+                                    <segue destination="OuI-Fp-HPK" kind="show" id="mhV-DC-cBI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -68,6 +84,137 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="29.23538230884558"/>
+        </scene>
+        <!--Added View Controller-->
+        <scene sceneID="rY9-ZF-iI3">
+            <objects>
+                <viewController storyboardIdentifier="AddedViewControllerSID" id="OvH-Do-IWP" customClass="AddedViewController" customModule="xcode93" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2x-Ch-FdG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeX-eA-C4W">
+                                <rect key="frame" x="16" y="37" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="iKu-0w-mYb"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="yeX-eA-C4W" id="aFd-Ga-eqz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JV8-6T-Kbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="11"/>
+        </scene>
+        <!--Master View Controller-->
+        <scene sceneID="Knc-X3-KH2">
+            <objects>
+                <viewController id="OuI-Fp-HPK" customClass="MasterViewController" customModule="xcode93" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6gf-pG-BC1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-Md-S8K">
+                                <rect key="frame" x="101" y="77" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRC-bT-vnG">
+                                <rect key="frame" x="8" y="136" width="375" height="371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gqq-Md-S8K" secondAttribute="trailing" constant="20" symbolic="YES" id="BfD-qA-cpB"/>
+                            <constraint firstItem="qCA-re-f2a" firstAttribute="top" secondItem="Gqq-Md-S8K" secondAttribute="bottom" constant="-41" id="CGa-Zy-ZQ0"/>
+                            <constraint firstItem="Gqq-Md-S8K" firstAttribute="leading" secondItem="qCA-re-f2a" secondAttribute="leading" constant="101" id="RA7-u7-gF4"/>
+                            <constraint firstItem="LRC-bT-vnG" firstAttribute="leading" secondItem="qCA-re-f2a" secondAttribute="leading" constant="8" id="e46-oS-cHc"/>
+                            <constraint firstItem="LRC-bT-vnG" firstAttribute="top" secondItem="Gqq-Md-S8K" secondAttribute="bottom" constant="31" id="g75-i4-Cf4"/>
+                            <constraint firstItem="LRC-bT-vnG" firstAttribute="trailing" secondItem="qCA-re-f2a" secondAttribute="trailing" constant="8" id="k8M-8D-VGL"/>
+                            <constraint firstItem="qCA-re-f2a" firstAttribute="bottom" secondItem="LRC-bT-vnG" secondAttribute="bottom" constant="160" id="kzX-4j-ibH"/>
+                            <constraint firstItem="LRC-bT-vnG" firstAttribute="width" secondItem="6gf-pG-BC1" secondAttribute="width" id="sct-ii-HRs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qCA-re-f2a"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="LRC-bT-vnG" id="o40-3t-Vyi"/>
+                        <outlet property="segmentedControl" destination="Gqq-Md-S8K" id="0cf-vS-Ogj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2nV-dI-lzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="808.24587706146929"/>
+        </scene>
+        <!--Summary View Controller-->
+        <scene sceneID="PpZ-cy-fuQ">
+            <objects>
+                <viewController storyboardIdentifier="SummaryViewController" id="Yjf-M9-zGp" customClass="SummaryViewController" customModule="xcode93" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j1V-TE-tBo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SummaryViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeK-uL-Alr">
+                                <rect key="frame" x="79" y="79" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baP-to-pYc">
+                                <rect key="frame" x="107" y="137" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Summary tap"/>
+                                <connections>
+                                    <action selector="tap:" destination="Yjf-M9-zGp" eventType="touchUpInside" id="DdN-WG-I3x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="60p-3W-mCd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBV-hU-BQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2593" y="808"/>
+        </scene>
+        <!--Sessions View Controller-->
+        <scene sceneID="6Ue-3j-Ehc">
+            <objects>
+                <viewController storyboardIdentifier="SessionsViewController" id="IjQ-Sr-mgx" customClass="SessionsViewController" customModule="xcode93" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HD6-jf-75i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SessionsViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhv-6f-stm">
+                                <rect key="frame" x="109" y="127" width="180" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4z-5f-8mY">
+                                <rect key="frame" x="122" y="185" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="session tap"/>
+                                <connections>
+                                    <action selector="tap:" destination="IjQ-Sr-mgx" eventType="touchUpInside" id="ry7-w0-RZd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ivT-Mj-ucE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKG-k3-ZaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.8" y="1491.9040479760122"/>
         </scene>
         <!--Tap View Controller-->
         <scene sceneID="IoS-kB-BTS">
